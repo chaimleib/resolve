@@ -12,16 +12,7 @@ function main() {
         return 1
     fi
     
-    suf="$(simplifyFilePath "$suf")"
-    domain="$(getDomain "$base")"
-    basePath="${base#$domain}"
-    if [[ "$basePath" != */ && -n "$suf" ]]; then
-        basePath="$basePath"/
-    fi
-    result="$basePath$suf"
-    result="$(simplifyFilePath "$result")"
-    result="$domain$result"
-    echo "$result"
+    stringResolve "$base" "$suf"
 }
 
 function showUsage() {
@@ -40,6 +31,22 @@ function showUsage() {
     echo
     echo "\$ $cmdName /messy/../../complicated////../path/before/../tidied"
     echo "/path/tidied"
+}
+
+function stringResolve() {
+    base="$1"
+    suf="$2"
+    
+    suf="$(simplifyFilePath "$suf")"
+    domain="$(getDomain "$base")"
+    basePath="${base#$domain}"
+    if [[ "$basePath" != */ && -n "$suf" ]]; then
+        basePath="$basePath"/
+    fi
+    result="$basePath$suf"
+    result="$(simplifyFilePath "$result")"
+    result="$domain$result"
+    echo "$result"
 }
 
 function simplifyFilePath() {
