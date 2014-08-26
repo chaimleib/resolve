@@ -17,6 +17,17 @@ Examples:
 
     $ resolve /messy/../../complicated////../path/before/../tidied
     /path/tidied
+    
+Install
+-------
+In a nutshell, download the sources and link them into a directory on your PATH:
+
+    cd /usr/local/lib
+    git clone https://github.com/chaimleib/resolve.git
+    cd resolve
+    git checkout tags/0.0.1
+    cd ../bin
+    ln -s ../lib/resolve/resolve resolve
 
 Features
 --------
