@@ -29,6 +29,14 @@ In a nutshell, download the sources and link them into a directory on your PATH:
     cd ../bin
     ln -s ../lib/resolve/resolve resolve
 
+Uninstall
+---------
+Just remove the link and the resolve directory.
+
+    cd /usr/local
+    rm bin/resolve
+    rm -rf lib/resolve
+
 Features
 --------
 * Does not access the filesystem or network; this is a string manipulation tool.
