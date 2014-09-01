@@ -41,3 +41,8 @@ Features
 --------
 * Does not access the filesystem or network; this is a string manipulation tool.
 * Written to be cross-platform on Mac, Linux, and Cygwin.
+
+Changelog
+---------
+* 0.0.1 - initial release
+* 0.0.2 (2014-08-31) - made relpaths beginning with '/' reseolve against the root
