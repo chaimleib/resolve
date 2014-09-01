@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cmdName="resolve"
-cmdVersion="0.0.1"
+cmdVersion="0.0.2"
 
 function main() {
     base="$1"
@@ -43,7 +43,11 @@ function stringResolve() {
     if [[ "$basePath" != */ && -n "$suf" ]]; then
         basePath="$basePath"/
     fi
-    result="$basePath$suf"
+    if [[ "$suf" == /* ]]; then
+        result="$suf"
+    else
+        result="$basePath$suf"
+    fi
     result="$(simplifyFilePath "$result")"
     result="$domain$result"
     echo "$result"

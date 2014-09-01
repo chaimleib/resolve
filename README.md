@@ -1,4 +1,4 @@
-resolve 0.0.1
+resolve 0.0.2
 =============
 Usage: 
 
@@ -25,7 +25,7 @@ In a nutshell, download the sources and link them into a directory on your PATH:
     cd /usr/local/lib
     git clone https://github.com/chaimleib/resolve.git
     cd resolve
-    git checkout tags/0.0.1
+    git checkout tags/0.0.2
     cd ../bin
     ln -s ../lib/resolve/resolve resolve
 
