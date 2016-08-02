@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cmdName="resolve"
-cmdVersion="0.1.0"
+cmdVersion="0.1.1"
 
 function main() {
     base="$1"
