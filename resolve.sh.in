@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cmdName="resolve"
-cmdVersion="0.0.2"
+cmdVersion="@version@"
 
 function main() {
     base="$1"
@@ -128,3 +128,4 @@ function getScheme() {
 if [[ "$0" != "-bash" ]]; then
     main "$@"
 fi
+
